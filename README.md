@@ -1,4 +1,15 @@
-# togif
+<h1 align="center">
+  togif
+</h1>
+
+<h4 align="center">
+  Command Line Tool to Convert a Video to GIF.
+</h4>
+
+<div align="center">
+  <img src=".readme/cli.png" width="75%">
+</div>
+
 
 ## Installation
 
