@@ -28,7 +28,7 @@ setup(
     install_requires=['imageio', 'imageio-ffmpeg', 'imgviz', 'tqdm'],
     author='Kentaro Wada',
     author_email='www.kentaro.wada@gmail.com',
-    url='http://github.com/wkentaro/dotfiles',
+    url='http://github.com/wkentaro/togif',
     entry_points={
         'console_scripts': ['togif=togif:main']
     },
