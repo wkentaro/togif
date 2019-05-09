@@ -18,6 +18,26 @@ pip install git+https://github.com/wkentaro/togif.git
 ```
 
 
+## Usage
+
+```bash
+$ togif --help
+usage: togif [-h] [--fps FPS] [--speed SPEED] [--duration DURATION]
+             [--resize RESIZE]
+             input_file
+
+positional arguments:
+  input_file           input video
+
+optional arguments:
+  -h, --help           show this help message and exit
+  --fps FPS            fps (default: 1)
+  --speed SPEED        speed (default: 1)
+  --duration DURATION  duration (default: None)
+  --resize RESIZE      resize (default: 1)
+```
+
+
 ## Example
 
 ```bash
