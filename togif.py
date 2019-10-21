@@ -13,6 +13,7 @@ def main():
     parser.add_argument('input_file', help='input video')
     parser.add_argument('--fps', type=float, default=1, help='fps')
     parser.add_argument('--speed', type=float, default=1, help='speed')
+    parser.add_argument('--start', type=float, default=0, help='start')
     parser.add_argument('--duration', type=float, help='duration')
     parser.add_argument('--resize', type=float, default=1, help='resize')
     args = parser.parse_args()
@@ -36,9 +37,13 @@ def main():
 
     scale = 1. * args.fps / fps_src
 
-    pbar = tqdm.tqdm(total=meta['duration'], unit='sec')
     j = -1
-    for i, frame in enumerate(reader):
+    for i in tqdm.trange(reader.get_length()):
+        elapsed_time = i * 1. / meta['fps']
+        if elapsed_time < args.start:
+            continue
+
+        frame = reader.get_data(i)
         if width is not None and height is not None:
             frame = imgviz.resize(
                 frame, height=height, width=width, interpolation='linear'
@@ -49,11 +54,8 @@ def main():
             j += 1
 
         if args.duration:
-            duration = i * 1. / meta['fps']
+            duration = elapsed_time - args.start
             if duration >= args.duration:
                 break
-
-        pbar.update(1. / meta['fps'])
-    pbar.close()
 
     reader.close()
