@@ -49,9 +49,10 @@ def main():
                 frame, height=height, width=width, interpolation='linear'
             )
 
-        if int(round(i * scale)) != j:
+        j_detail = i * scale
+        if int(round(j_detail)) != j:
             writer.append_data(frame)
-            j += 1
+            j = int(round(j_detail))
 
         if args.duration:
             duration = elapsed_time - args.start
