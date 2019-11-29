@@ -25,7 +25,7 @@ setup(
     name='togif',
     version=version,
     py_modules=['togif'],
-    install_requires=['imageio', 'imageio-ffmpeg', 'imgviz', 'tqdm'],
+    install_requires=['imageio<2.5', 'imageio-ffmpeg', 'imgviz', 'tqdm'],
     author='Kentaro Wada',
     author_email='www.kentaro.wada@gmail.com',
     url='http://github.com/wkentaro/togif',
