@@ -14,7 +14,7 @@
 ## Installation
 
 ```bash
-pip install git+https://github.com/wkentaro/togif.git
+pip install togif
 ```
 
 
