@@ -22,8 +22,8 @@ pip install togif
 
 ```bash
 $ togif --help
-usage: togif [-h] [--fps FPS] [--speed SPEED] [--duration DURATION]
-             [--resize RESIZE]
+usage: togif [-h] [--fps FPS] [--speed SPEED] [--start START]
+             [--duration DURATION] [--resize RESIZE]
              input_file
 
 positional arguments:
@@ -33,6 +33,7 @@ optional arguments:
   -h, --help           show this help message and exit
   --fps FPS            fps (default: 1)
   --speed SPEED        speed (default: 1)
+  --start START        start (default: 0)
   --duration DURATION  duration (default: None)
   --resize RESIZE      resize (default: 1)
 ```
